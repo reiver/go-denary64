@@ -9,6 +9,10 @@ package denary64
 // I.e.,:...
 //
 //	var value denary64.Type // Starts off with a value of zero (0).
+//
+// If you want to give a denary64.Type a ‘whole number’ value, then you want do that using the denary64.Uint() func:
+//
+//      var value denary64.Type = denary64.Uint(123)
 type Type struct {
 	mantissa uint64
 	div10    uint64
