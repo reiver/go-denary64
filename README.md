@@ -12,3 +12,15 @@ Online documentation, which includes examples, can be found at:
 http://godoc.org/github.com/reiver/go-denary64
 
 [![GoDoc](https://godoc.org/github.com/reiver/go-shunt?status.svg)](https://godoc.org/github.com/reiver/go-denary64)
+
+## Example
+```Go
+import "github.com/reiver/go-denary64"
+
+x := denary64.Parse("12000.42")
+y := denary64.Parse("7.00")
+
+z := x.Add(y)
+
+fmt.Printf("x + y = z", x, y, z)
+```
