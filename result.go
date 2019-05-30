@@ -1,6 +1,6 @@
 package denary64
 
-// A Result is a ‘polymorphic type’ that represents either nothing, and error, or a base-10 floating point number.
+// A Result is a ‘polymorphic type’ that can contain either nothing, an error, or a base-10 floating point number.
 //
 // A way to create a denary64.Result that represents nothing would be to either to use the denary64.None() func:
 //

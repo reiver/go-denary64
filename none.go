@@ -1,10 +1,10 @@
 package denary64
 
-// None returns a denary64.Result that represents the concept of ‘nothing’.
+// None returns a denary64.Result that contains (the concept of) ‘nothing’.
 //
-// Recall that a denary64.Result is a ‘polymorphic type’ that represents either nothing, and error, or a base-10 floating point number.
+// Recall that a denary64.Result is a ‘polymorphic type’ that can contain either nothing, an error, or a base-10 floating point number.
 //
-// denary64.None() gives you that ‘nothing’ value for denary64.Result.
+// denary64.None() gives you a denary64.Result that contains (the concept of) ‘nothing’.
 //
 // Here is an example usage of it:
 //
