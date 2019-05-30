@@ -23,4 +23,5 @@ y := denary64.Parse("7.00")
 z := x.Add(y)
 
 fmt.Printf("x + y = z", x, y, z)
+// Output: 12000.42 + 7 = 12007.42
 ```
