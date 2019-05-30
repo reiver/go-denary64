@@ -10,9 +10,9 @@ func ExampleType_String() {
 
 	var value denary64.Type = denary64.Uint64(123)
 
-	fmt.Println(value)
+	fmt.Println(value) // This internally calls value.String()
 
-	fmt.Printf("value = %s", value)
+	fmt.Printf("value = %s", value) // This also internally calls value.String()
 
 	// Output:
 	// 123
