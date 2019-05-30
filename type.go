@@ -8,7 +8,7 @@ package denary64
 //
 // I.e.,:...
 //
-//	var value denary64.Type // Start off with a value of zero (0).
+//	var value denary64.Type // Starts off with a value of zero (0).
 type Type struct {
 	mantissa uint64
 	div10    uint64
