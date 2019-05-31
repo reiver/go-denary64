@@ -190,6 +190,61 @@ func TestTypeGoString(t *testing.T) {
 
 
 		{
+			Value:      denary64.Float(700, 1),
+			Expected: "denary64.Uint64(70)",
+		},
+		{
+			Value:      denary64.Float(700, 2),
+			Expected: "denary64.Uint64(7)",
+		},
+		{
+			Value:     denary64.Float(700, 3),
+			Expected: "denary64.Float(7, 1)",
+		},
+		{
+			Value:     denary64.Float(700, 4),
+			Expected: "denary64.Float(7, 2)",
+		},
+		{
+			Value:     denary64.Float(700, 5),
+			Expected: "denary64.Float(7, 3)",
+		},
+		{
+			Value:     denary64.Float(700, 6),
+			Expected: "denary64.Float(7, 4)",
+		},
+		{
+			Value:     denary64.Float(700, 7),
+			Expected: "denary64.Float(7, 5)",
+		},
+		{
+			Value:     denary64.Float(700, 8),
+			Expected: "denary64.Float(7, 6)",
+		},
+		{
+			Value:     denary64.Float(700, 9),
+			Expected: "denary64.Float(7, 7)",
+		},
+		{
+			Value:     denary64.Float(700, 10),
+			Expected: "denary64.Float(7, 8)",
+		},
+		{
+			Value:     denary64.Float(700, 11),
+			Expected: "denary64.Float(7, 9)",
+		},
+		{
+			Value:     denary64.Float(700, 12),
+			Expected: "denary64.Float(7, 10)",
+		},
+		{
+			Value:     denary64.Float(700, 13),
+			Expected: "denary64.Float(7, 11)",
+		},
+
+
+
+		{
 			Value:     denary64.Float(40300200010000, 401),
 			Expected: "denary64.Float(40300200010000, 401)",
 		},
@@ -209,6 +264,11 @@ func TestTypeGoString(t *testing.T) {
 
 			n     := randomness.Uint64()
 			shift := randomness.Uint64()
+
+			for shift > 0 && 0 == n % 10 {
+				n /= 10
+				shift--
+			}
 
 			switch shift {
 			default:
