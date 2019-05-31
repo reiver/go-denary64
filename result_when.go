@@ -14,8 +14,8 @@ func (receiver Result) WhenError(fn func(error)) {
 	}
 }
 
-// WhenSome with call the func fn when the denary64.Result is some.
-func (receiver Result) WhenSome(fn func(Type)) {
+// WhenSomething with call the func fn when the denary64.Result is some.
+func (receiver Result) WhenSomething(fn func(Type)) {
 	if Nothing() != receiver && nil== receiver.err {
 		fn(receiver.value)
 	}
