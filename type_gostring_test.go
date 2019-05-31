@@ -246,7 +246,7 @@ func TestTypeGoString(t *testing.T) {
 
 		{
 			Value:     denary64.Float(40300200010000, 401),
-			Expected: "denary64.Float(40300200010000, 401)",
+			Expected: "denary64.Float(4030020001, 397)",
 		},
 
 
