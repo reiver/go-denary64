@@ -13,16 +13,16 @@ import (
 //
 // For example:
 //
-//	var x denary64.Result = denary64.Some(denary64.Uint64(123))
+//	var x denary64.Result = denary64.Something(denary64.Uint64(123))
 //	
 //	fmt.Printf("x = %#v")
 //
 // Will print:
 //
-//	x = denary64.Some(denary64.Uint64(123))
+//	x = denary64.Something(denary64.Uint64(123))
 //
 // And, for example:
-//	var x denary64.Result = denary64.Some(denary64.Uint64(123))
+//	var x denary64.Result = denary64.Something(denary64.Uint64(123))
 //	
 //	var s string = x.GoString()
 //	
@@ -30,10 +30,10 @@ import (
 //
 // Will return:
 //
-//	"denary64.Some((denary64.Uint64(123)))"
+//	"denary64.Something((denary64.Uint64(123)))"
 //
 // And, for example:
-//	var x denary64.Type = denary64.Some(denary64.ShiftRight(123,2)) // = 1.23
+//	var x denary64.Type = denary64.Something(denary64.ShiftRight(123,2)) // = 1.23
 //	
 //	var s string = x.GoString()
 //	
@@ -41,7 +41,7 @@ import (
 //
 // Will return:
 //
-//	"denary64.Some(denary64.ShiftRight(123,2))"
+//	"denary64.Something(denary64.ShiftRight(123,2))"
 func (receiver Result) GoString() string {
 
 	var buffer bytes.Buffer
@@ -61,7 +61,7 @@ func (receiver Result) GoString() string {
 			}
 			buffer.WriteRune(')')
 		case nil:
-			buffer.WriteString("denary64.Some(")
+			buffer.WriteString("denary64.Something(")
 			buffer.WriteString(receiver.value.GoString())
 			buffer.WriteRune(')')
 		}
