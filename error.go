@@ -12,7 +12,7 @@ import (
 // denary64.Err() gives you a denary64.Result that contains an error.
 func Err(err error) Result {
 	if nil == err {
-		return None()
+		return Nothing()
 	}
 
 	return Result {

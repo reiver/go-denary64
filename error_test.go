@@ -10,8 +10,8 @@ func TestErrNil(t *testing.T) {
 
 	var result Result = Err(nil)
 
-	if None() != result {
-		t.Errorf("Expected None(), but actually got %#v", result)
+	if Nothing() != result {
+		t.Errorf("Expected Nothing(), but actually got %#v", result)
 		return
 	}
 }
@@ -41,8 +41,8 @@ func TestErr(t *testing.T) {
 
 		var actual Result = Err(test.Err)
 
-		if None() == actual {
-			t.Errorf("For test #%d, did not expect denary.None(), but actually got %#v", testNumber, actual)
+		if Nothing() == actual {
+			t.Errorf("For test #%d, did not expect denary.Nothing(), but actually got %#v", testNumber, actual)
 			continue
 		}
 

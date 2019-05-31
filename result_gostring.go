@@ -47,8 +47,8 @@ func (receiver Result) GoString() string {
 	var buffer bytes.Buffer
 
 	switch receiver {
-	case None():
-		buffer.WriteString("denary64.None()")
+	case Nothing():
+		buffer.WriteString("denary64.Nothing()")
 	default:
 		switch receiver.err {
 		default:

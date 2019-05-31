@@ -1,20 +1,26 @@
 package denary64
 
-// None returns a denary64.Result that contains (the concept of) ‘nothing’.
+// Nothing returns a denary64.Result that contains ‘nothing’.
 //
 // Recall that a denary64.Result is a ‘polymorphic type’ that can contain either nothing, an error, or a base-10 floating point number.
 //
-// denary64.None() gives you a denary64.Result that contains (the concept of) ‘nothing’.
+// denary64.Nothing() gives you a denary64.Result that contains ‘nothing’.
 //
 // Here is an example usage of it:
+//
+//	var result denary64.Result = denary64.Nothing()
+//
+// Here is another example usage of it:
 //
 //	var result denary64.Result
 //	
 //	//...
 //	
-//	if denary64.None() == result {
+//	if denary64.Nothing() == result {
 //		// ...
 //	}
-func None() Result {
+//
+// Note that an denary64.Result that has not had a value put into is has ‘nothing’ in it.
+func Nothing() Result {
 	return Result{}
 }

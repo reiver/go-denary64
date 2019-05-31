@@ -4,10 +4,10 @@ import (
 	"testing"
 )
 
-func TestNone(t *testing.T) {
+func TestNothing(t *testing.T) {
 
 	var actual   Result
-	var expected Result = None()
+	var expected Result = Nothing()
 
 	if expected != actual {
 		t.Errorf("Expected %#v, but actually got %#v.", expected, actual)

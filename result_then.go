@@ -4,7 +4,7 @@ package denary64
 //
 // If the denary64.Result contain none, or and error, then Then has no effect.
 func (receiver Result) Then(fn func(Type)Result) Result {
-	if None() == receiver {
+	if Nothing() == receiver {
 		return receiver
 	}
 	if err := receiver.err; nil != err {

@@ -15,8 +15,8 @@ func TestResultGoString(t *testing.T) {
 		Expected string
 	}{
 		{
-			Value:     denary64.None(),
-			Expected: "denary64.None()",
+			Value:     denary64.Nothing(),
+			Expected: "denary64.Nothing()",
 		},
 
 
@@ -29,7 +29,7 @@ func TestResultGoString(t *testing.T) {
 
 		{
 			Value:     denary64.Err(nil),
-			Expected: "denary64.None()",
+			Expected: "denary64.Nothing()",
 		},
 
 

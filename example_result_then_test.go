@@ -12,7 +12,7 @@ func ExampleResult_Then() {
 		return denary64.Some(denary64.Uint64(9876543210))
 	}
 
-	var none denary64.Result = denary64.None()
+	var none denary64.Result = denary64.Nothing()
 	var err  denary64.Result = denary64.Error("This is an error.")
 	var some denary64.Result = denary64.Some(denary64.Uint64(123))
 
@@ -27,11 +27,11 @@ func ExampleResult_Then() {
 	fmt.Printf("some.Then(fn) = %#v\n", some.Then(fn))
 
 	// Output:
-	// none = denary64.None()
+	// none = denary64.Nothing()
 	// err  = denary64.Error("This is an error.")
 	// some = denary64.Some(denary64.Uint64(123))
 	// ---
-	// none.Then(fn) = denary64.None()
+	// none.Then(fn) = denary64.Nothing()
 	// err.Then(fn)  = denary64.Error("This is an error.")
 	// some.Then(fn) = denary64.Some(denary64.Uint64(9876543210))
 }
