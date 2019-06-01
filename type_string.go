@@ -30,7 +30,10 @@ func (receiver Type) String() string {
 
 	var buffer bytes.Buffer
 
-	{
+	switch receiver.loaded {
+	case false:
+		return "⟨undefined⟩"
+	case true:
 		var n uint64 = receiver.mantissa
 		var stack []uint64
 

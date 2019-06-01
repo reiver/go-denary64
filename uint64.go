@@ -10,7 +10,8 @@ package denary64
 //	// Output: value = 123
 func Uint64(value uint64) Type {
 	return Type{
+		loaded:   true,
 		mantissa: value,
-		div10: 0,
+		div10:    0,
 	}
 }

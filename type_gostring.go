@@ -46,17 +46,22 @@ func (receiver Type) GoString() string {
 
 	var buffer bytes.Buffer
 
-	switch receiver.div10 {
-	default:
-		buffer.WriteString("denary64.Float(")
-		fmt.Fprintf(&buffer, "%d", receiver.mantissa)
-		buffer.WriteString(", ")
-		fmt.Fprintf(&buffer, "%d", receiver.div10)
-		buffer.WriteRune(')')
-	case 0:
-		buffer.WriteString("denary64.Uint64(")
-		fmt.Fprintf(&buffer, "%d", receiver.mantissa)
-		buffer.WriteRune(')')
+	switch receiver.loaded {
+	case false:
+		buffer.WriteString("denary64.Undefined()")
+	case true:
+		switch receiver.div10 {
+		case 0:
+			buffer.WriteString("denary64.Uint64(")
+			fmt.Fprintf(&buffer, "%d", receiver.mantissa)
+			buffer.WriteRune(')')
+		default:
+			buffer.WriteString("denary64.Float(")
+			fmt.Fprintf(&buffer, "%d", receiver.mantissa)
+			buffer.WriteString(", ")
+			fmt.Fprintf(&buffer, "%d", receiver.div10)
+			buffer.WriteRune(')')
+		}
 	}
 
 	return buffer.String()

@@ -12,6 +12,10 @@ package denary64
 //	// Output:
 //	// 12
 func (receiver Type) Floor() Type {
+	if ! receiver.loaded {
+		return receiver
+	}
+
 	var x Type = receiver
 
 	for 0 < x.div10 {

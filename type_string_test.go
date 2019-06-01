@@ -11,6 +11,19 @@ func TestTypeString(t *testing.T) {
 		Expected string
 	}{
 		{
+			Value:      Undefined(),
+			Expected: "⟨undefined⟩",
+		},
+
+
+
+
+
+
+
+
+
+		{
 			Value: Uint64(0),
 			Expected:    "0",
 		},

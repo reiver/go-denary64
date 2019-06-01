@@ -11,6 +11,19 @@ func TestTypeFloor(t *testing.T) {
 		Expected Type
 	}{
 		{
+			Value:    Undefined(),
+			Expected: Undefined(),
+		},
+
+
+
+
+
+
+
+
+
+		{
 			Value:    Uint64(0),
 			Expected: Uint64(0),
 		},

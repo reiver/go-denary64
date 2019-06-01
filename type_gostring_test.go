@@ -17,6 +17,19 @@ func TestTypeGoString(t *testing.T) {
 		Expected string
 	}{
 		{
+			Value:     denary64.Undefined(),
+			Expected: "denary64.Undefined()",
+		},
+
+
+
+
+
+
+
+
+
+		{
 			Value:     denary64.Uint64(0),
 			Expected: "denary64.Uint64(0)",
 		},
@@ -88,7 +101,7 @@ func TestTypeGoString(t *testing.T) {
 			Expected: "denary64.Uint64(2)",
 		},
 		{
-			Value: denary64.Float(3, 0),
+			Value:      denary64.Float(3, 0),
 			Expected: "denary64.Uint64(3)",
 		},
 		{
