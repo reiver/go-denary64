@@ -20,32 +20,32 @@ func TestAddError(t *testing.T) {
 			Left:           maxUint64,
 			Right:          1,
 			ExpectedResult: 0,
-			ExpectedErr:    fmt.Errorf("denary64: overflow; %d + %d", maxUint64, 1),
+			ExpectedErr:    overflowf("%d + %d", maxUint64, 1),
 		},
 		{
 			Left:           maxUint64,
 			Right:          2,
 			ExpectedResult: 1,
-			ExpectedErr:    fmt.Errorf("denary64: overflow; %d + %d", maxUint64, 2),
+			ExpectedErr:    overflowf("%d + %d", maxUint64, 2),
 		},
 		{
 			Left:           maxUint64,
 			Right:          3,
 			ExpectedResult: 2,
-			ExpectedErr:    fmt.Errorf("denary64: overflow; %d + %d", maxUint64, 3),
+			ExpectedErr:    overflowf("%d + %d", maxUint64, 3),
 		},
 
 		{
 			Left:           maxUint64,
 			Right:          maxUint64-1,
 			ExpectedResult: maxUint64-2,
-			ExpectedErr:    fmt.Errorf("denary64: overflow; %d + %d", maxUint64, maxUint64-1),
+			ExpectedErr:    overflowf("%d + %d", maxUint64, maxUint64-1),
 		},
 		{
 			Left:           maxUint64,
 			Right:          maxUint64,
 			ExpectedResult: maxUint64-1,
-			ExpectedErr:    fmt.Errorf("denary64: overflow; %d + %d", maxUint64, maxUint64),
+			ExpectedErr:    overflowf("%d + %d", maxUint64, maxUint64),
 		},
 
 
@@ -60,32 +60,32 @@ func TestAddError(t *testing.T) {
 			Left:           1,
 			Right:          maxUint64,
 			ExpectedResult: 0,
-			ExpectedErr:    fmt.Errorf("denary64: overflow; %d + %d", 1, maxUint64),
+			ExpectedErr:    overflowf("%d + %d", 1, maxUint64),
 		},
 		{
 			Left:           2,
 			Right:          maxUint64,
 			ExpectedResult: 1,
-			ExpectedErr:    fmt.Errorf("denary64: overflow; %d + %d", 2, maxUint64),
+			ExpectedErr:    overflowf("%d + %d", 2, maxUint64),
 		},
 		{
 			Left:           3,
 			Right:          maxUint64,
 			ExpectedResult: 2,
-			ExpectedErr:    fmt.Errorf("denary64: overflow; %d + %d", 3, maxUint64),
+			ExpectedErr:    overflowf("%d + %d", 3, maxUint64),
 		},
 
 		{
 			Left:           maxUint64-1,
 			Right:          maxUint64,
 			ExpectedResult: maxUint64-2,
-			ExpectedErr:    fmt.Errorf("denary64: overflow; %d + %d", maxUint64-1, maxUint64),
+			ExpectedErr:    overflowf("%d + %d", maxUint64-1, maxUint64),
 		},
 		{
 			Left:           maxUint64,
 			Right:          maxUint64,
 			ExpectedResult: maxUint64-1,
-			ExpectedErr:    fmt.Errorf("denary64: overflow; %d + %d", maxUint64, maxUint64),
+			ExpectedErr:    overflowf("%d + %d", maxUint64, maxUint64),
 		},
 
 
@@ -100,32 +100,32 @@ func TestAddError(t *testing.T) {
 			Left:           maxUint64-1,
 			Right:          2,
 			ExpectedResult: 0,
-			ExpectedErr:    fmt.Errorf("denary64: overflow; %d + %d", maxUint64-1, 2),
+			ExpectedErr:    overflowf("%d + %d", maxUint64-1, 2),
 		},
 		{
 			Left:           maxUint64-1,
 			Right:          3,
 			ExpectedResult: 1,
-			ExpectedErr:    fmt.Errorf("denary64: overflow; %d + %d", maxUint64-1, 3),
+			ExpectedErr:    overflowf("%d + %d", maxUint64-1, 3),
 		},
 		{
 			Left:           maxUint64-1,
 			Right:          4,
 			ExpectedResult: 2,
-			ExpectedErr:    fmt.Errorf("denary64: overflow; %d + %d", maxUint64-1, 4),
+			ExpectedErr:    overflowf("%d + %d", maxUint64-1, 4),
 		},
 
 		{
 			Left:           maxUint64-1,
 			Right:          maxUint64-1,
 			ExpectedResult: maxUint64-3,
-			ExpectedErr:    fmt.Errorf("denary64: overflow; %d + %d", maxUint64-1, maxUint64-1),
+			ExpectedErr:    overflowf("%d + %d", maxUint64-1, maxUint64-1),
 		},
 		{
 			Left:           maxUint64-1,
 			Right:          maxUint64,
 			ExpectedResult: maxUint64-2,
-			ExpectedErr:    fmt.Errorf("denary64: overflow; %d + %d", maxUint64-1, maxUint64),
+			ExpectedErr:    overflowf("%d + %d", maxUint64-1, maxUint64),
 		},
 
 
@@ -140,32 +140,32 @@ func TestAddError(t *testing.T) {
 			Left:           2,
 			Right:          maxUint64-1,
 			ExpectedResult: 0,
-			ExpectedErr:    fmt.Errorf("denary64: overflow; %d + %d", 2, maxUint64-1),
+			ExpectedErr:    overflowf("%d + %d", 2, maxUint64-1),
 		},
 		{
 			Left:           3,
 			Right:          maxUint64-1,
 			ExpectedResult: 1,
-			ExpectedErr:    fmt.Errorf("denary64: overflow; %d + %d", 3, maxUint64-1),
+			ExpectedErr:    overflowf("%d + %d", 3, maxUint64-1),
 		},
 		{
 			Left:           4,
 			Right:          maxUint64-1,
 			ExpectedResult: 2,
-			ExpectedErr:    fmt.Errorf("denary64: overflow; %d + %d", 4, maxUint64-1),
+			ExpectedErr:    overflowf("%d + %d", 4, maxUint64-1),
 		},
 
 		{
 			Left:           maxUint64-1,
 			Right:          maxUint64-1,
 			ExpectedResult: maxUint64-3,
-			ExpectedErr:    fmt.Errorf("denary64: overflow; %d + %d", maxUint64-1, maxUint64-1),
+			ExpectedErr:    overflowf("%d + %d", maxUint64-1, maxUint64-1),
 		},
 		{
 			Left:           maxUint64,
 			Right:          maxUint64-1,
 			ExpectedResult: maxUint64-2,
-			ExpectedErr:    fmt.Errorf("denary64: overflow; %d + %d", maxUint64, maxUint64-1),
+			ExpectedErr:    overflowf("%d + %d", maxUint64, maxUint64-1),
 		},
 	}
 
